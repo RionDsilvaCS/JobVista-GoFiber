@@ -12,16 +12,15 @@ import (
 	"github.com/RionDsilvaCS/responses"
 	"github.com/go-playground/validator"
 	"github.com/gofiber/fiber/v2"
-	"github.com/joho/godotenv"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
 func EnvMongoURI() string {
-	err := godotenv.Load()
-	if err != nil {
-		log.Fatal("Error loading .env file")
-	}
+	// err := godotenv.Load()
+	// if err != nil {
+	// 	log.Fatal("Error loading .env file")
+	// }
 	return os.Getenv("MONGO_URI")
 }
 
